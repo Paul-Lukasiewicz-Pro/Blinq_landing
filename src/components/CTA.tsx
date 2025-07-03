@@ -1,5 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Calendar, ArrowRight, CheckCircle } from 'lucide-react';
+import Cal, { getCalApi } from '@calcom/embed-react';
+
+// Déclaration du type global pour window.Cal
+// @ts-ignore
+declare global {
+  interface Window {
+    Cal?: any;
+  }
+}
 
 const CTA: React.FC = () => {
   const benefits = [
@@ -8,6 +17,13 @@ const CTA: React.FC = () => {
     "Devis détaillé sous 48h",
     "Accompagnement dédié"
   ];
+
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: '20min' });
+      cal('ui', { hideEventTypeDetails: false, layout: 'month_view' });
+    })();
+  }, []);
 
   return (
     <section className="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-blue-900 text-white relative overflow-hidden">
@@ -65,38 +81,13 @@ const CTA: React.FC = () => {
 
           {/* Right Column - Calendar Preview */}
           <div className="lg:block hidden">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <div className="bg-white rounded-xl p-6 text-gray-900">
-                <h3 className="text-lg font-semibold mb-4 flex items-center">
-                  <Calendar className="w-5 h-5 mr-2 text-purple-600" />
-                  Planifiez votre consultation
-                </h3>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between py-2 px-3 bg-purple-50 rounded-lg">
-                    <span className="text-sm font-medium">Durée</span>
-                    <span className="text-sm text-purple-600">20 minutes</span>
-                  </div>
-                  
-                  <div className="flex items-center justify-between py-2 px-3 bg-purple-50 rounded-lg">
-                    <span className="text-sm font-medium">Format</span>
-                    <span className="text-sm text-purple-600">Visioconférence</span>
-                  </div>
-                  
-                  <div className="flex items-center justify-between py-2 px-3 bg-purple-50 rounded-lg">
-                    <span className="text-sm font-medium">Coût</span>
-                    <span className="text-sm font-bold text-green-600">Gratuit</span>
-                  </div>
-                </div>
-
-                <div className="mt-6 p-4 bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg">
-                  <p className="text-sm text-gray-700">
-                    <strong>Au programme :</strong> Analyse de vos besoins, présentation de notre méthodologie, 
-                    et proposition de solutions personnalisées.
-                  </p>
-                </div>
-              </div>
-            </div>
+            {/* Utilisation du composant Cal.com officiel */}
+            <Cal
+              namespace="20min"
+              calLink="paul-lukasiewicz/20min"
+              style={{ width: '100%', height: '600px', overflow: 'scroll', background: 'rgba(255,255,255,0.1)', borderRadius: '1rem', padding: '2rem', border: '1px solid rgba(255,255,255,0.2)' }}
+              config={{ layout: 'month_view' }}
+            />
           </div>
         </div>
 

@@ -4,9 +4,9 @@ import AnimatedText from './AnimatedText';
 
 const Hero: React.FC = () => {
   const benefits = [
-    "Développement rapide",
+    "Livré en 30 Jours",
     "100% sur mesure", 
-    "Méthodologie Builder"
+    "Partout en Europe"
   ];
 
   const animatedWords = ["Dashboard", "CRM", "Outil Interne", "Portail Client", "Agent IA"];
@@ -21,22 +21,23 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight max-w-5xl mx-auto">
-            On crée votre outil métier sur-mesure .
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight max-w-5xl mx-auto font-garet">
+            On crée votre outil métier
             <span className="block">
+              sur-mesure.
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+          <div className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
             Blinq conçoit et développe votre{' '}
             <AnimatedText 
               words={animatedWords} 
               className="text-purple-600 font-semibold"
-            />{' '}
-            sur mesure<br />
-            Pour booster l'efficacité de votre entreprise. 
-          </p>
+              interval={3000}
+            />{' '}<br />
+            Le but : éliminer la complexité et vous faire gagner du temps.
+          </div>
 
           {/* Benefits */}
           <div className="flex flex-wrap justify-center gap-6 mb-12">

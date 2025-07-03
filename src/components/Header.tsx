@@ -6,6 +6,14 @@ interface HeaderProps {
   setIsMenuOpen: (open: boolean) => void;
 }
 
+// Fonction utilitaire pour scroll smooth
+const scrollToSection = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
   return (
     <header className="fixed top-4 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8">
@@ -27,12 +35,27 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-6">
-              <a href="#value-prop" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
-                Méthodologie
-              </a>
-              <a href="#faq" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
+              <button
+                type="button"
+                className="text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none cursor-pointer"
+                onClick={() => scrollToSection('nos-projets')}
+              >
+                Projets
+              </button>
+              <button
+                type="button"
+                className="text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none cursor-pointer"
+                onClick={() => scrollToSection('methode')}
+              >
+                Notre méthode
+              </button>
+              <button
+                type="button"
+                className="text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none cursor-pointer"
+                onClick={() => scrollToSection('faq')}
+              >
                 FAQ
-              </a>
+              </button>
             </nav>
           </div>
 
@@ -45,7 +68,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               className="group relative bg-gray-900 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg overflow-hidden"
             >
               <span className="relative z-10 group-hover:text-white transition-colors duration-300">
-                PRENDRE UN RENDEZ-VOUS
+                Prendre un Rendez-vous
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
             </a>
@@ -64,27 +87,43 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-6 pt-2 pb-4 space-y-1">
-              <a 
-                href="#value-prop" 
-                className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors font-medium"
-                onClick={() => setIsMenuOpen(false)}
+              <button
+                type="button"
+                className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none w-full text-left"
+                onClick={() => {
+                  scrollToSection('nos-projets');
+                  setIsMenuOpen(false);
+                }}
               >
-                Méthodologie
-              </a>
-              <a 
-                href="#faq" 
-                className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors font-medium"
-                onClick={() => setIsMenuOpen(false)}
+                Projets
+              </button>
+              <button
+                type="button"
+                className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none w-full text-left"
+                onClick={() => {
+                  scrollToSection('methode');
+                  setIsMenuOpen(false);
+                }}
+              >
+                Notre méthode
+              </button>
+              <button
+                type="button"
+                className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none w-full text-left"
+                onClick={() => {
+                  scrollToSection('faq');
+                  setIsMenuOpen(false);
+                }}
               >
                 FAQ
-              </a>
+              </button>
               <a 
                 href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block bg-gray-900 text-white px-6 py-3 rounded-full text-center font-medium mt-4"
               >
-                PRENDRE UN RENDEZ-VOUS
+                Prendre un Rendez-vous
               </a>
             </div>
           </div>
