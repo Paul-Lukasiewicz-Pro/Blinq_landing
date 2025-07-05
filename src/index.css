@@ -2,3 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes floatY {
+  0% { transform: translateY(0) rotate(var(--rotation, -10deg)); }
+  50% { transform: translateY(-5px) rotate(var(--rotation, -10deg)); }
+  100% { transform: translateY(0) rotate(var(--rotation, -10deg)); }
+}
+
+.floating-img {
+  animation: floatY 3.5s ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}

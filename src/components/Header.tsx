@@ -6,11 +6,16 @@ interface HeaderProps {
   setIsMenuOpen: (open: boolean) => void;
 }
 
-// Fonction utilitaire pour scroll smooth
+// Fonction utilitaire pour scroll smooth avec offset pour le header fixe
 const scrollToSection = (id: string) => {
   const el = document.getElementById(id);
   if (el) {
-    el.scrollIntoView({ behavior: 'smooth' });
+    const headerHeight = 80; // Hauteur approximative du header (64px + padding)
+    const elementPosition = el.offsetTop - headerHeight;
+    window.scrollTo({
+      top: elementPosition,
+      behavior: 'smooth'
+    });
   }
 };
 
@@ -23,14 +28,19 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
           <div className="flex items-center space-x-8">
             {/* Logo and Company Name */}
             <div className="flex items-center space-x-3">
-              <img 
-                src="https://res.cloudinary.com/dxxxnbmwy/image/upload/v1751449511/image_fk8oah.png" 
-                alt="Blinq" 
-                className="h-8 w-auto"
-              />
-              <span className="text-2xl font-bold text-gray-900" style={{ fontFamily: 'Garet, sans-serif' }}>
-                Blinq.
-              </span>
+              <button
+                onClick={() => scrollToSection('hero')}
+                className="flex items-center space-x-3 bg-transparent border-none outline-none cursor-pointer"
+              >
+                <img 
+                  src="/favicon.png" 
+                  alt="Blinq" 
+                  className="h-8 w-auto"
+                />
+                <span className="text-2xl font-bold text-gray-900" style={{ fontFamily: 'Garet, sans-serif' }}>
+                  Blinq.
+                </span>
+              </button>
             </div>
 
             {/* Desktop Navigation */}
@@ -41,6 +51,13 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                 onClick={() => scrollToSection('nos-projets')}
               >
                 Projets
+              </button>
+              <button
+                type="button"
+                className="text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none cursor-pointer"
+                onClick={() => scrollToSection('notre-offre')}
+              >
+                Offre
               </button>
               <button
                 type="button"
@@ -96,6 +113,16 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                 }}
               >
                 Projets
+              </button>
+              <button
+                type="button"
+                className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none w-full text-left"
+                onClick={() => {
+                  scrollToSection('notre-offre');
+                  setIsMenuOpen(false);
+                }}
+              >
+                Offre
               </button>
               <button
                 type="button"

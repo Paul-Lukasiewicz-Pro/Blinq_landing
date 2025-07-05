@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import AnimatedText from './AnimatedText';
 
 const Hero: React.FC = () => {
+  const [titleVisible, setTitleVisible] = useState(false);
+  const [subtitleVisible, setSubtitleVisible] = useState(false);
+  const [benefitsVisible, setBenefitsVisible] = useState(false);
+  const [ctaVisible, setCtaVisible] = useState(false);
+
   const benefits = [
     "Livré en 30 Jours",
     "100% sur mesure", 
@@ -10,6 +15,21 @@ const Hero: React.FC = () => {
   ];
 
   const animatedWords = ["Dashboard", "CRM", "Outil Interne", "Portail Client", "Agent IA"];
+
+  useEffect(() => {
+    // Animation séquentielle des éléments
+    const timer1 = setTimeout(() => setTitleVisible(true), 300);
+    const timer2 = setTimeout(() => setSubtitleVisible(true), 800);
+    const timer3 = setTimeout(() => setBenefitsVisible(true), 1200);
+    const timer4 = setTimeout(() => setCtaVisible(true), 1600);
+
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+      clearTimeout(timer3);
+      clearTimeout(timer4);
+    };
+  }, []);
 
   return (
     <section className="pt-20 pb-16 min-h-screen flex items-center" style={{ backgroundColor: '#f7f7f7' }}>
@@ -20,16 +40,34 @@ const Hero: React.FC = () => {
             🏆 Top 1% Agence d'outils métiers de France
           </div>
 
-          {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight max-w-5xl mx-auto font-garet">
-            On crée votre outil métier
-            <span className="block">
+          {/* Main Headline avec animation */}
+          <h1 
+            className={`text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight max-w-5xl mx-auto font-garet transition-all duration-1000 ease-out ${
+              titleVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-8'
+            }`}
+          >
+            <span className={`inline-block transition-all duration-700 ease-out delay-200 ${
+              titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
+              On crée votre outil métier
+            </span>
+            <span className={`block transition-all duration-700 ease-out delay-400 ${
+              titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
               sur-mesure.
             </span>
           </h1>
 
-          {/* Subtitle */}
-          <div className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+          {/* Subtitle avec animation */}
+          <div 
+            className={`text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed transition-all duration-1000 ease-out delay-500 ${
+              subtitleVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-8'
+            }`}
+          >
             Blinq conçoit et développe votre{' '}
             <AnimatedText 
               words={animatedWords} 
@@ -39,18 +77,38 @@ const Hero: React.FC = () => {
             Le but : éliminer la complexité et vous faire gagner du temps.
           </div>
 
-          {/* Benefits */}
-          <div className="flex flex-wrap justify-center gap-6 mb-12">
+          {/* Benefits avec animation */}
+          <div 
+            className={`flex flex-wrap justify-center gap-6 mb-12 transition-all duration-1000 ease-out delay-700 ${
+              benefitsVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-8'
+            }`}
+          >
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-2">
+              <div 
+                key={index} 
+                className={`flex items-center space-x-2 transition-all duration-500 ease-out ${
+                  benefitsVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-4'
+                }`}
+                style={{ transitionDelay: `${800 + index * 200}ms` }}
+              >
                 <CheckCircle className="w-5 h-5 text-purple-600" />
                 <span className="text-gray-700 font-medium">{benefit}</span>
               </div>
             ))}
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          {/* CTA Buttons avec animation */}
+          <div 
+            className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 transition-all duration-1000 ease-out delay-900 ${
+              ctaVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-8'
+            }`}
+          >
             <a 
               href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true" 
               target="_blank" 

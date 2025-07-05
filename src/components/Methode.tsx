@@ -1,49 +1,130 @@
 import React from 'react';
-import { Search, PenTool, Code, PackageCheck } from 'lucide-react';
 
-const steps = [
+const planning = [
   {
-    icon: <Search className="w-8 h-8 text-purple-600 mb-4" />,
-    title: 'Audit',
-    description: 'Workshop avec les responsables métiers pour cerner le périmètre du projet, et le besoin digital.'
+    day: 'Jour 1',
+    col: 0,
+    title: 'Découverte',
+    description: "Appel de découverte avec Paul ou Jules",
+    images: [
+      { src: '/meet.png', rotation: -10, top: '40', right: '16', delay: 0 }
+    ],
   },
   {
-    icon: <PenTool className="w-8 h-8 text-purple-600 mb-4" />,
-    title: 'Product Design',
-    description: 'Nous designons votre futur outil, en établissant les workflows et parcours utilisateurs.'
+    day: 'Jour 2',
+    col: 1,
+    title: 'Cadrage',
+    description: "Appel de lancement avec Paul",
+    images: [
+      { src: '/meet.png', rotation: 15, top: '40', right: '16', delay: 0.5 }
+    ],
   },
   {
-    icon: <Code className="w-8 h-8 text-purple-600 mb-4" />,
-    title: 'Développement',
-    description: 'Nous développons votre outil grâce à nos outils IA.'
+    day: 'Jour 5',
+    col: 2,
+    title: 'Validation Product Design',
+    description: 'Validation des maquettes et parcours',
+    images: [
+      { src: '/Figma.png', rotation: -5, top: '60', right: '70', delay: 1 }
+    ],
   },
   {
-    icon: <PackageCheck className="w-8 h-8 text-purple-600 mb-4" />,
-    title: 'Livraison et ajustements',
-    description: 'Livraison, tests utilisateurs et ajustements selon vos retours.'
-  }
+    day: 'Développement',
+    col: 3,
+    title: 'Building',
+    description: 'On produit votre outil',
+    images: [
+      { src: '/cursor.png', rotation: 20, top: '50', right: '16', delay: 0.2 },
+      { src: '/lovable.png', rotation: -15, top: '-50', right: '60', delay: 1.2 },
+      { src: '/openai.png', rotation: 8, top: '55', right: '80', delay: 0.8 }
+    ],
+  },
+  {
+    day: 'Jour 20',
+    col: 4,
+    title: 'Présentation de la V1',
+    description: 'Présentation, retours et ajustements',
+    images: [
+      { src: '/meet.png', rotation: -12, top: '12', right: '16', delay: 1.5 }
+    ],
+  },
+  {
+    day: 'Jour 30',
+    col: 5,
+    title: 'Livraison finale',
+    description: 'Livraison de la version finale',
+    images: [],
+  },
+];
+
+const columns = [
+  'Jour 1',
+  'Jour 2',
+  'Jour 5',
+  'Développement',
+  'Jour 20',
+  'Jour 30',
 ];
 
 const Methode: React.FC = () => {
   return (
-    <section id="methode" className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-            Notre méthode en 4 étapes
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Une approche structurée, humaine et efficace pour garantir le succès de votre projet digital.
-          </p>
-        </div>
-        <div className="grid md:grid-cols-4 gap-8">
-          {steps.map((step, idx) => (
-            <div key={idx} className="bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
-              <div>{step.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{idx + 1} - {step.title}</h3>
-              <p className="text-gray-600 text-base">{step.description}</p>
-            </div>
-          ))}
+    <section id="methode" className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center">
+      <div className="w-full">
+        <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-6 py-20">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-3">
+              Votre outil interne en <span className="text-purple-600">30 jours</span>
+            </h2>
+            <p className="text-base text-gray-600 max-w-xl mx-auto">
+              Un planning clair, chaque étape sur une ligne, reliée par une timeline visuelle.
+            </p>
+          </div>
+          <div className="bg-white rounded-2xl shadow p-3 overflow-x-auto">
+            <table className="min-w-full border-separate border-spacing-y-1">
+              <thead>
+                <tr>
+                  {columns.map((col, idx) => (
+                    <th key={idx} className={`text-xs font-bold text-gray-400 pb-1 text-center whitespace-nowrap ${idx < columns.length - 1 ? 'border-r border-dashed border-gray-300' : ''}`}>{col}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {planning.map((step, rowIdx) => (
+                  <tr key={rowIdx} className="relative h-6">
+                    {columns.map((col, colIdx) => (
+                      <td
+                        key={colIdx}
+                        className={`align-top text-center relative px-0 py-0 ${colIdx < columns.length - 1 ? 'border-r border-dashed border-gray-300' : ''}`}
+                      >
+                        {/* Afficher les images de la colonne */}
+                        {colIdx === step.col && step.images && step.images.map((img, i) => (
+                          <img
+                            key={i}
+                            src={img.src}
+                            alt={`illustration-${i}`}
+                            className="absolute w-10 h-10 object-contain floating-img rounded-lg"
+                            style={{ 
+                              transform: `rotate(${img.rotation}deg)`, 
+                              top: `${img.top}px`, 
+                              right: `${img.right}px`,
+                              ['--rotation' as string]: `${img.rotation}deg`,
+                              ['--delay' as string]: `${img.delay}s`
+                            }}
+                          />
+                        ))}
+                        {colIdx === step.col ? (
+                          <div className="bg-gray-50 border-l-4 border-purple-600 rounded-lg shadow p-1 flex flex-col items-start mx-0 max-w-[180px] min-w-[140px]">
+                            <div className="font-semibold text-gray-900 text-xs text-left mb-0.5 leading-tight">{step.title}</div>
+                            <div className="text-gray-600 text-[10px] text-left leading-tight">{step.description}</div>
+                          </div>
+                        ) : null}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>
