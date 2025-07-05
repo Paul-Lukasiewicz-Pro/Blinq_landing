@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+
 import NosProjets from './components/NosProjets';
 import NotreOffre from './components/NotreOffre';
 import Methode from './components/Methode';
+
 import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
@@ -15,6 +17,7 @@ function App() {
     <div className="min-h-screen" style={{ backgroundColor: '#f7f7f7' }}>
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <main className="pt-16">
+
         <section id="hero" className="min-h-screen">
           <Hero />
         </section>
@@ -33,6 +36,7 @@ function App() {
         <section id="faq" className="min-h-screen">
           <FAQ />
         </section>
+
       </main>
       <Footer />
     </div>
