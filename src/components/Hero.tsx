@@ -32,12 +32,12 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="pt-20 pb-16 min-h-screen flex items-center" style={{ backgroundColor: '#f7f7f7' }}>
+    <section className="pt-20 pb-16 min-h-screen flex items-center">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-50 to-blue-50 rounded-full text-sm font-medium text-purple-700 mb-8">
-            🏆 Top 1% Agence d'outils métiers de France
+            🏆 Meilleure agence de développement d'outils internes en France 2025
           </div>
 
           {/* Main Headline avec animation */}
