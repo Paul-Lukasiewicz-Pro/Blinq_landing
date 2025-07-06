@@ -45,7 +45,7 @@ const planning = [
     title: 'Présentation de la V1',
     description: 'Présentation, retours et ajustements',
     images: [
-      { src: '/meet.png', rotation: -12, top: '12', right: '16', delay: 1.5 }
+      { src: '/meet.png', rotation: -12, top: '40', right: '16', delay: 1.5 }
     ],
   },
   {

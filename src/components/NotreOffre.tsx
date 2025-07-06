@@ -4,13 +4,13 @@ const avantages = [
   "Livraison en 30 jours",
   "100% sur-mesure",
   "Un seul interlocuteur",
-  "Design system inclus",
+  "Intégration outils tierces",
   "Développement & intégration",
   "Retours illimités",
 ];
 
 const options = [
-  "Formation de vos équipes",
+  "Hébèrgement et Maintenance",
 
 ];
 

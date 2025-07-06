@@ -24,16 +24,16 @@ function App() {
           <Hero />
         </section>
         <SectionDivider />
-        <section id="nos-projets" className="min-h-screen">
-          <NosProjets />
+        <section id="methode" className="min-h-screen">
+          <Methode />
         </section>
         <SectionDivider />
         <section id="notre-offre" className="min-h-screen">
           <NotreOffre />
         </section>
         <SectionDivider />
-        <section id="methode" className="min-h-screen">
-          <Methode />
+         <section id="nos-projets" className="min-h-screen">
+          <NosProjets />
         </section>
         <SectionDivider />
         <section id="cta" className="min-h-screen">
