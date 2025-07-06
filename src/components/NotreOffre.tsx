@@ -22,8 +22,11 @@ const images = [
 
 const NotreOffre: React.FC = () => {
   return (
-    <section id="notre-offre" className="min-h-screen flex items-center justify-center py-20" style={{ backgroundColor: '#FFFFFF' }}>
-      <div className="w-full max-w-xl mx-auto bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl px-6 py-12 md:px-16 md:py-16 flex flex-col items-center">
+    <section id="notre-offre" className="min-h-screen flex flex-col items-center justify-center py-20 bg-hero">
+      <h2 className="text-5xl font-bold text-gray-900 mb-12 text-center" style={{ fontFamily: 'Garet, sans-serif' }}>
+        Notre offre
+      </h2>
+      <div className="w-full max-w-xl mx-auto bg-gradient-to-b from-purple-50 backdrop-blur-md rounded-3xl shadow-2xl px-6 py-12 md:px-16 md:py-16 flex flex-col items-center">
         {/* Prix */}
         <div className="text-center mb-4">
           <span className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white text-lg font-bold px-6 py-2 rounded-full shadow-lg tracking-wide">

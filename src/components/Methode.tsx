@@ -68,7 +68,7 @@ const columns = [
 
 const Methode: React.FC = () => {
   return (
-    <section id="methode" className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center">
+    <section id="methode" className="min-h-screen bg-hero flex items-center">
       <div className="w-full">
         <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-6 py-20">
           <div className="text-center mb-8">

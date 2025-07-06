@@ -32,17 +32,17 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="pt-20 pb-16 min-h-screen flex items-center">
+    <section className="pt-16 sm:pt-20 pb-12 sm:pb-16 min-h-screen flex items-center">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-50 to-blue-50 rounded-full text-sm font-medium text-purple-700 mb-8">
+          <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-gradient-to-r from-purple-50 to-blue-50 rounded-full text-xs sm:text-sm font-medium text-purple-700 mb-6 sm:mb-8 max-w-sm sm:max-w-none">
             🏆 Meilleure agence de développement d'outils internes en France 2025
           </div>
 
           {/* Main Headline avec animation */}
           <h1 
-            className={`text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight max-w-5xl mx-auto font-garet transition-all duration-1000 ease-out ${
+            className={`text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight max-w-5xl mx-auto font-garet transition-all duration-1000 ease-out ${
               titleVisible 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'
@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
 
           {/* Subtitle avec animation */}
           <div 
-            className={`text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed transition-all duration-1000 ease-out delay-500 ${
+            className={`text-lg sm:text-xl md:text-2xl text-gray-600 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed transition-all duration-1000 ease-out delay-500 ${
               subtitleVisible 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'
@@ -73,13 +73,14 @@ const Hero: React.FC = () => {
               words={animatedWords} 
               className="text-purple-600 font-semibold"
               interval={3000}
-            />{' '}<br />
-            Le but : éliminer la complexité et vous faire gagner du temps.
+            />{' '}
+
+            <span className="block sm:inline">Le but : éliminer la complexité et améliorer vos résultats</span>
           </div>
 
           {/* Benefits avec animation */}
           <div 
-            className={`flex flex-wrap justify-center gap-6 mb-12 transition-all duration-1000 ease-out delay-700 ${
+            className={`flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-6 mb-8 sm:mb-12 transition-all duration-1000 ease-out delay-700 ${
               benefitsVisible 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'
@@ -88,22 +89,22 @@ const Hero: React.FC = () => {
             {benefits.map((benefit, index) => (
               <div 
                 key={index} 
-                className={`flex items-center space-x-2 transition-all duration-500 ease-out ${
+                className={`flex items-center justify-center sm:justify-start space-x-2 transition-all duration-500 ease-out ${
                   benefitsVisible 
                     ? 'opacity-100 translate-y-0' 
                     : 'opacity-0 translate-y-4'
                 }`}
                 style={{ transitionDelay: `${800 + index * 200}ms` }}
               >
-                <CheckCircle className="w-5 h-5 text-purple-600" />
-                <span className="text-gray-700 font-medium">{benefit}</span>
+                <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600 flex-shrink-0" />
+                <span className="text-sm sm:text-base text-gray-700 font-medium">{benefit}</span>
               </div>
             ))}
           </div>
 
           {/* CTA Buttons avec animation */}
           <div 
-            className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 transition-all duration-1000 ease-out delay-900 ${
+            className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12 sm:mb-16 transition-all duration-1000 ease-out delay-900 ${
               ctaVisible 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'
@@ -113,14 +114,14 @@ const Hero: React.FC = () => {
               href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center"
+              className="group bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center w-full sm:w-auto"
             >
               Prendre un rendez-vous
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
             <a 
               href="#value-prop"
-              className="text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-50 transition-all duration-300"
+              className="text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-gray-50 transition-all duration-300 w-full sm:w-auto text-center"
             >
               Découvrir notre méthode
             </a>
@@ -128,7 +129,7 @@ const Hero: React.FC = () => {
 
           {/* Trust Indicator */}
           <div className="text-center">
-            <p className="text-gray-500 text-sm mb-4">
+            <p className="text-gray-500 text-xs sm:text-sm mb-4">
               + de 50 entreprises nous font confiance.
             </p>
           </div>

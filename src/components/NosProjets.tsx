@@ -3,7 +3,7 @@ import LogosCarousel from './LogosCarousel';
 
 const NosProjets: React.FC = () => {
   return (
-    <section id="nos-projets" className="min-h-screen bg-white flex items-center">
+    <section id="nos-projets" className="min-h-screen bg-hero flex items-center">
       <div className="w-full">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12 py-20">
           {/* Étude de cas */}
@@ -24,7 +24,7 @@ const NosProjets: React.FC = () => {
             <img src="/Case_Studies/VokaCaseStudy.png" alt="Voka-Maintenance" className="rounded-xl shadow-lg max-w-full h-auto" />
           </div>
         </div>
-        <LogosCarousel />
+        
       </div>
     </section>
   );

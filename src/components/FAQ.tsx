@@ -40,7 +40,7 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="min-h-screen bg-gray-50 flex items-center">
+    <section id="faq" className="min-h-screen bg-hero flex items-center">
       <div className="w-full">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           {/* Section Header */}

@@ -18,7 +18,7 @@ const CTA: React.FC = () => {
   }, []);
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 text-gray-900 relative overflow-hidden flex items-center">
+    <section className="min-h-screen bg-hero text-gray-900 relative overflow-hidden flex items-center">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full -translate-x-32 -translate-y-32"></div>
