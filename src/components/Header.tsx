@@ -21,30 +21,30 @@ const scrollToSection = (id: string) => {
 
 const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
   return (
-    <header className="fixed top-4 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto bg-white/90 backdrop-blur-sm rounded-full shadow-lg">
-        <div className="flex justify-between items-center h-16 px-6">
+    <header className="fixed top-2 sm:top-4 left-0 right-0 z-50 px-2 sm:px-4 lg:px-8 font-garet">
+      <div className="max-w-7xl mx-auto bg-white/95 backdrop-blur-md shadow-lg border border-gray-100 rounded-none lg:rounded-full">
+        <div className="flex justify-between items-center h-14 sm:h-16 px-4 sm:px-6">
           {/* Left side - Logo, Company Name and Navigation */}
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-4 sm:space-x-8">
             {/* Logo and Company Name */}
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2 sm:space-x-3">
               <button
                 onClick={() => scrollToSection('hero')}
-                className="flex items-center space-x-3 bg-transparent border-none outline-none cursor-pointer"
+                className="flex items-center space-x-2 sm:space-x-3 bg-transparent border-none outline-none cursor-pointer"
               >
                 <img 
                   src="/favicon.png" 
                   alt="Blinq" 
-                  className="h-8 w-auto"
+                  className="h-6 sm:h-8 w-auto"
                 />
-                <span className="text-2xl font-bold text-gray-900" style={{ fontFamily: 'Garet, sans-serif' }}>
+                <span className="text-xl sm:text-2xl font-bold text-gray-900">
                   Blinq.
                 </span>
               </button>
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-6">
+            <nav className="hidden lg:flex items-center space-x-6">
               <button
                 type="button"
                 className="text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none cursor-pointer"
@@ -77,7 +77,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
           </div>
 
           {/* Right side - CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <a 
               href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true" 
               target="_blank" 
@@ -93,20 +93,21 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2"
+            className="lg:hidden p-2 -mr-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={20} className="text-gray-700" /> : <Menu size={20} className="text-gray-700" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-6 pt-2 pb-4 space-y-1">
+          <div className="lg:hidden border-t border-gray-100 rounded-b-2xl bg-white/95 w-full shadow-xl">
+            <div className="px-4 py-4 space-y-2">
               <button
                 type="button"
-                className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none w-full text-left"
+                className="block w-full px-4 py-3 text-left text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors font-medium bg-transparent border-none outline-none rounded-lg"
                 onClick={() => {
                   scrollToSection('nos-projets');
                   setIsMenuOpen(false);
@@ -116,7 +117,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               </button>
               <button
                 type="button"
-                className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none w-full text-left"
+                className="block w-full px-4 py-3 text-left text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors font-medium bg-transparent border-none outline-none rounded-lg"
                 onClick={() => {
                   scrollToSection('notre-offre');
                   setIsMenuOpen(false);
@@ -126,7 +127,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               </button>
               <button
                 type="button"
-                className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none w-full text-left"
+                className="block w-full px-4 py-3 text-left text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors font-medium bg-transparent border-none outline-none rounded-lg"
                 onClick={() => {
                   scrollToSection('methode');
                   setIsMenuOpen(false);
@@ -136,7 +137,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               </button>
               <button
                 type="button"
-                className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none w-full text-left"
+                className="block w-full px-4 py-3 text-left text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors font-medium bg-transparent border-none outline-none rounded-lg"
                 onClick={() => {
                   scrollToSection('faq');
                   setIsMenuOpen(false);
@@ -144,14 +145,16 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               >
                 FAQ
               </button>
-              <a 
-                href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block bg-gray-900 text-white px-6 py-3 rounded-full text-center font-medium mt-4"
-              >
-                Prendre un Rendez-vous
-              </a>
+              <div className="pt-2">
+                <a 
+                  href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-center font-medium hover:shadow-lg transition-all duration-300"
+                >
+                  Prendre un Rendez-vous
+                </a>
+              </div>
             </div>
           </div>
         )}
