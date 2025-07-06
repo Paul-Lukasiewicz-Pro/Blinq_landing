@@ -1,109 +1,105 @@
 import React from 'react';
 import { Mail, Linkedin, Twitter, Phone, MapPin } from 'lucide-react';
 
+// Fonction utilitaire pour scroll smooth avec offset pour le header fixe
+const scrollToSection = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) {
+    const headerHeight = 80; // Hauteur approximative du header (64px + padding)
+    const elementPosition = el.offsetTop - headerHeight;
+    window.scrollTo({
+      top: elementPosition,
+      behavior: 'smooth'
+    });
+  }
+};
+
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
-          {/* Company Info */}
-          <div className="md:col-span-2">
-            <div className="flex items-center mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8">
+          {/* Blinq Info */}
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
               <img 
-                src="https://res.cloudinary.com/dxxxnbmwy/image/upload/v1751449511/image_fk8oah.png" 
+                src="/favicon.png" 
                 alt="Blinq" 
-                className="h-8 w-auto brightness-0 invert"
+                className="h-8 w-auto"
               />
+              <span className="text-2xl font-bold text-white font-garet">
+                Blinq.
+              </span>
             </div>
-            <p className="text-gray-400 mb-6 leading-relaxed max-w-md">
-              Nous développons des outils internes sur mesure pour optimiser 
-              la productivité des entreprises grâce à notre méthodologie "Builder" 
-              et au vibe coding.
+            <p className="text-gray-400 text-sm">
+              Nous transformons vos idées en expériences digitales exceptionnelles.
             </p>
             <div className="flex space-x-4">
-              <a 
-                href="https://linkedin.com/company/blinq" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300"
-              >
-                <Linkedin className="w-5 h-5" />
+              <a href="mailto:pro.lukasiewicz@gmail.com" className="text-gray-400 hover:text-white transition-colors">
+                <Mail size={20} />
               </a>
-              <a 
-                href="https://twitter.com/blinq" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a 
-                href="mailto:contact@blinq.fr"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300"
-              >
-                <Mail className="w-5 h-5" />
+              <a href="https://linkedin.com/company/blinq" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin size={20} />
               </a>
             </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="text-white font-semibold mb-4">Services</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Outils métiers sur mesure
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Automatisation des processus
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Intégration d'API
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Support et maintenance
-                </a>
-              </li>
-            </ul>
+          {/* Navigation */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white">Navigation</h3>
+            <nav className="flex flex-col space-y-2">
+              <button
+                type="button"
+                className="text-gray-400 hover:text-white transition-colors text-left"
+                onClick={() => scrollToSection('methode')}
+              >
+                Notre méthode
+              </button>
+              <button
+                type="button"
+                className="text-gray-400 hover:text-white transition-colors text-left"
+                onClick={() => scrollToSection('notre-offre')}
+              >
+                Offre
+              </button>
+              <button
+                type="button"
+                className="text-gray-400 hover:text-white transition-colors text-left"
+                onClick={() => scrollToSection('nos-projets')}
+              >
+                Projets
+              </button>
+              <button
+                type="button"
+                className="text-gray-400 hover:text-white transition-colors text-left"
+                onClick={() => scrollToSection('faq')}
+              >
+                FAQ
+              </button>
+            </nav>
           </div>
 
           {/* Contact */}
-          <div>
-            <h4 className="text-white font-semibold mb-4">Contact</h4>
-            <ul className="space-y-3">
-              <li className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-purple-400 flex-shrink-0" />
-                <a 
-                  href="mailto:contact@blinq.fr" 
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  contact@blinq.fr
-                </a>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-purple-400 flex-shrink-0" />
-                <a 
-                  href="tel:+33123456789" 
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  +33 1 23 45 67 89
-                </a>
-              </li>
-              <li className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-400">
-                  Paris, France
-                </span>
-              </li>
-            </ul>
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white">Contact</h3>
+            <div className="space-y-2">
+              <div className="flex items-center space-x-2 text-gray-400">
+                <Mail size={16} />
+                <span>pro.lukasiewicz@gmail.com</span>
+              </div>
+ 
+            </div>
+            <a 
+              href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-300"
+            >
+              Prendre un Rendez-vous
+            </a>
           </div>
         </div>
+      
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8">

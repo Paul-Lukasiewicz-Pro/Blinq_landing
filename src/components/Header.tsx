@@ -45,26 +45,27 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6">
-              <button
-                type="button"
-                className="text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none cursor-pointer"
-                onClick={() => scrollToSection('nos-projets')}
-              >
-                Projets
-              </button>
-              <button
-                type="button"
-                className="text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none cursor-pointer"
-                onClick={() => scrollToSection('notre-offre')}
-              >
-                Offre
-              </button>
+             
               <button
                 type="button"
                 className="text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none cursor-pointer"
                 onClick={() => scrollToSection('methode')}
               >
                 Notre méthode
+              </button>
+               <button
+                type="button"
+                className="text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none cursor-pointer"
+                onClick={() => scrollToSection('notre-offre')}
+              >
+                Offre
+              </button>
+               <button
+                type="button"
+                className="text-gray-600 hover:text-gray-900 transition-colors font-medium bg-transparent border-none outline-none cursor-pointer"
+                onClick={() => scrollToSection('nos-projets')}
+              >
+                Projets
               </button>
               <button
                 type="button"

@@ -6,12 +6,8 @@ const FAQ: React.FC = () => {
 
   const faqData = [
     {
-      question: "Qu'est-ce que le 'vibe coding' exactement ?",
-      answer: "Le vibe coding est notre approche de développement agile qui privilégie la collaboration continue avec nos clients. Plutôt que de suivre un cahier des charges figé, nous itérons rapidement avec des prototypes fonctionnels pour s'assurer que l'outil correspond exactement à vos besoins métier."
-    },
-    {
       question: "Combien de temps faut-il pour développer un outil sur mesure ?",
-      answer: "Grâce à notre méthodologie Builder, nous pouvons livrer un MVP fonctionnel en 2-4 semaines selon la complexité. Les itérations et améliorations se font ensuite par cycles courts de 1-2 semaines, permettant une mise en production rapide."
+      answer: "Grâce à notre méthodologie AI-Native, nous pouvons livrer un MVP fonctionnel en 2-4 semaines selon la complexité. Les itérations et améliorations se font ensuite par cycles courts de 1-2 semaines, permettant une mise en production rapide."
     },
     {
       question: "Nos données sont-elles sécurisées ?",
@@ -22,12 +18,8 @@ const FAQ: React.FC = () => {
       answer: "Oui, c'est l'un de nos points forts. Nous créons des outils qui s'intègrent parfaitement à votre écosystème existant : ERP, CRM, bases de données, APIs tierces. L'objectif est de fluidifier vos processus, pas de les complexifier."
     },
     {
-      question: "Que se passe-t-il après le développement ?",
-      answer: "Nous proposons un accompagnement complet : formation de vos équipes, documentation, support technique, et maintenance évolutive. Vos outils peuvent évoluer avec votre entreprise grâce à notre approche modulaire."
-    },
-    {
-      question: "Quel est le coût d'un projet typique ?",
-      answer: "Chaque projet étant unique, nous établissons un devis personnalisé après analyse de vos besoins. Notre approche itérative permet de maîtriser les coûts et de prioriser les fonctionnalités essentielles pour votre ROI."
+      question: "Comment est hébergé mon outil ?",
+      answer: "Nous vous offrons la possibilité de choisir entre un hébergement sur nos serveurs sécurisés ou sur vos infrastructures. Nous pouvons également vous aider à trouver un hébergeur adapté à vos besoins."
     }
   ];
 
