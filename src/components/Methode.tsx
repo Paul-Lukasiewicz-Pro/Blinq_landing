@@ -5,7 +5,7 @@ const planning = [
     day: 'Jour 1',
     col: 0,
     title: 'Découverte',
-    description: "Appel de découverte un membre de l'équipe",
+    description: "Appel de découverte avec un membre de l'équipe",
     images: [
       { src: '/meet.png', rotation: -10, top: '40', right: '16', delay: 0 }
     ],
@@ -14,7 +14,7 @@ const planning = [
     day: 'Jour 2',
     col: 1,
     title: 'Cadrage',
-    description: "Appel de lancement avec Paul",
+    description: "Appel de cadrage avec Paul",
     images: [
       { src: '/meet.png', rotation: 15, top: '40', right: '16', delay: 0.5 }
     ],
@@ -23,7 +23,7 @@ const planning = [
     day: 'Jour 5',
     col: 2,
     title: 'Validation Product Design',
-    description: 'Validation des maquettes et parcours',
+    description: 'Validation des maquettes et parcours utilisateur',
     images: [
       { src: '/Figma.png', rotation: -5, top: '60', right: '70', delay: 1 }
     ],
@@ -52,7 +52,7 @@ const planning = [
     day: 'Jour 30',
     col: 5,
     title: 'Livraison finale',
-    description: 'Livraison de la version finale',
+    description: 'Intégration du produit fini',
     images: [],
   },
 ];

@@ -20,6 +20,10 @@ const FAQ: React.FC = () => {
     {
       question: "Comment est hébergé mon outil ?",
       answer: "Nous vous offrons la possibilité de choisir entre un hébergement sur nos serveurs sécurisés ou sur vos infrastructures. Nous pouvons également vous aider à trouver un hébergeur adapté à vos besoins."
+    }, 
+    {
+      question: "Et si mon projet est trop complexe pour être livré en 30 Jours ?",
+      answer: "Si votre outil est trop complexe pour être livré en 30 Jours (Backend lourd, intégration à des outils complexes, etc.), nous décomposons le développement en Sprints. Premièrement, un sprint de 30 Jours pour vous livrer un MVP (Version Minimum Fonctionnelle) de votre outil. Ensuite, nous développons les fonctionnalités complémentaires durant des Sprints ultérieurs, que nous aurons identifiés lors de l'appel de cadrage."
     }
   ];
 
