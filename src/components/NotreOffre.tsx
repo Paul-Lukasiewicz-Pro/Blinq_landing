@@ -95,17 +95,6 @@ const NotreOffre: React.FC = () => {
           Prendre un RDV
         </a>
       </div>
-      {/* Encart pour les projets > 30 jours */}
-      <div className="w-4/5 mx-auto mt-8 bg-gradient-to-b from-purple-50 backdrop-blur-md rounded-3xl shadow-lg px-6 py-8 md:px-12 md:py-10 flex flex-col">
-        <h3 className="text-xl font-bold text-gray-800 mb-4 text-left" style={{ fontFamily: 'Garet, sans-serif' }}>
-          Et si votre projet dépasse les 30 jours :
-        </h3>
-        <p className="text-md text-gray-600 text-left">
-          Si votre projet est complexe (Backend complexe, intégration avec des systèmes existants rigides, besoins spécifiques, etc.) et nécessite plus de temps, nous adoptons une méthodologie par sprints. <br />
-          Lors de l'entretien de cadrage, nous définissons une roadmap, avec la promesse de vous livrer un MVP (Version minimale fonctionnelle) de votre outils en 30 jours.<br />
-          Ensuite, nous travaillons par sprints de 2 semaines, en vous livrant des versions itératives de votre outil.
-        </p>
-      </div>
     </section>
   );
 };

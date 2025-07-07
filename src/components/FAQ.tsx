@@ -22,8 +22,8 @@ const FAQ: React.FC = () => {
       answer: "Nous vous offrons la possibilité de choisir entre un hébergement sur nos serveurs sécurisés ou sur vos infrastructures. Nous pouvons également vous aider à trouver un hébergeur adapté à vos besoins."
     }, 
     {
-      question: "Et si mon projet est trop complexe pour être livré en 30 Jours ?",
-      answer: "Si votre outil est trop complexe pour être livré en 30 Jours (Backend lourd, intégration à des outils complexes, etc.), nous décomposons le développement en Sprints. Premièrement, un sprint de 30 Jours pour vous livrer un MVP (Version Minimum Fonctionnelle) de votre outil. Ensuite, nous développons les fonctionnalités complémentaires durant des Sprints ultérieurs, que nous aurons identifiés lors de l'appel de cadrage."
+      question: "Et si mon projet dépasse les 30 jours ?",
+      answer: "Si votre projet est complexe (Backend complexe, intégration avec des systèmes existants rigides, besoins spécifiques, etc.) et nécessite plus de temps, nous adoptons une méthodologie par sprints. Lors de l'entretien de cadrage, nous définissons une roadmap, avec la promesse de vous livrer un MVP (Version minimale fonctionnelle) de votre outils en 30 jours. Ensuite, nous travaillons par sprints de 2 semaines, en vous livrant des versions itératives de votre outil. Si votre outil est trop complexe pour être livré en 30 Jours (Backend lourd, intégration à des outils complexes, etc.), nous décomposons le développement en Sprints. Premièrement, un sprint de 30 Jours pour vous livrer un MVP (Version Minimum Fonctionnelle) de votre outil. Ensuite, nous développons les fonctionnalités complémentaires durant des Sprints ultérieurs, que nous aurons identifiés lors de l'appel de cadrage."
     }
   ];
 
