@@ -5,7 +5,7 @@ const planning = [
     day: 'Jour 1',
     col: 0,
     title: 'Découverte',
-    description: "Appel de découverte avec Paul ou Jules",
+    description: "Appel de découverte un membre de l'équipe",
     images: [
       { src: '/meet.png', rotation: -10, top: '40', right: '16', delay: 0 }
     ],
@@ -76,7 +76,7 @@ const Methode: React.FC = () => {
               Votre outil interne en <span className="text-purple-600">30 jours</span>
             </h2>
             <p className="text-base text-gray-600 max-w-xl mx-auto">
-              Un planning clair, chaque étape sur une ligne, reliée par une timeline visuelle.
+              Un process clair, une équipe réduite et un interlocuteur unique pour vous accompagner dans la création de votre outil interne. Vous êtes au centre de notre démarche.
             </p>
           </div>
           <div className="bg-white rounded-2xl shadow p-3 overflow-x-auto">

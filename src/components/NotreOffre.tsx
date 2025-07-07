@@ -4,13 +4,17 @@ const avantages = [
   "Livraison en 30 jours",
   "100% sur-mesure",
   "Un seul interlocuteur",
-  "Intégration outils tierces",
   "Développement & intégration",
   "Retours illimités",
+  "Hébèrgement et Maintenance",
+  "Bases de Données Custom"
 ];
 
 const options = [
-  "Hébèrgement et Maintenance",
+  "Backend Custom",
+  "Intégration API Tierces",
+  "Intégration IA",
+  "Hébèrgement & Maintenance",
 
 ];
 
@@ -77,7 +81,7 @@ const NotreOffre: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2 mb-6 w-full max-w-xl">
           {options.map((opt, i) => (
             <div key={i} className="flex items-center text-purple-400 text-sm italic">
-              <span className="mr-2">✚</span> {opt} <span className="ml-1">*</span>
+              {opt} <span className="ml-1">*</span>
             </div>
           ))}
         </div>

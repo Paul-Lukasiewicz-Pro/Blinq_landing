@@ -31,6 +31,14 @@ const Hero: React.FC = () => {
     };
   }, []);
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="pt-16 sm:pt-20 pb-12 sm:pb-16 min-h-screen flex items-center">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -120,7 +128,8 @@ const Hero: React.FC = () => {
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
             <a 
-              href="#value-prop"
+              href="#methode"
+              onClick={handleScroll}
               className="text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-gray-50 transition-all duration-300 w-full sm:w-auto text-center"
             >
               Découvrir notre méthode
@@ -128,9 +137,9 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Trust Indicator */}
-          <div className="text-center">
+          <div className="text-center visibility: hidden">
             <p className="text-gray-500 text-xs sm:text-sm mb-4">
-              + de 50 entreprises nous font confiance.
+              + de 50 entreprises nous font confiance. 
             </p>
           </div>
         </div>
