@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
         <div className="text-center">
           {/* Badge */}
           <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-gradient-to-r from-purple-50 to-blue-50 rounded-full text-xs sm:text-sm font-medium text-purple-700 mb-6 sm:mb-8 max-w-sm sm:max-w-none">
-            🏆 Meilleure agence de développement d'outils internes en France 2025
+            🏆 L'agence de développement d'outils internes la plus efficace de France 2025
           </div>
 
           {/* Main Headline avec animation */}
