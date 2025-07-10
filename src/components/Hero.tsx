@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
   const benefits = [
     "Livré en 30 Jours",
     "100% sur mesure", 
-    "Partout en Europe"
+    "Prix Fixe"
   ];
 
   const animatedWords = ["Dashboard", "CRM", "Outil Interne", "Portail Client", "Agent IA"];
