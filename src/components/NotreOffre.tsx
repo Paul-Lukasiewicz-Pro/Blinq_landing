@@ -6,12 +6,12 @@ const avantages = [
   "Un seul interlocuteur",
   "Développement & intégration",
   "Retours illimités",
-  "Bases de Données Custom"
+  "Bases de Données Custom",
+  "Intégration d'API"
 ];
 
 const options = [
-  "Backend Custom",
-  "Intégration API Tierces",
+  "Backend Custom applicatif custom",
   "Intégration IA",
   "Hébèrgement & Maintenance",
 
@@ -33,7 +33,7 @@ const NotreOffre: React.FC = () => {
         {/* Prix */}
         <div className="text-center mb-4">
           <span className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white text-lg font-bold px-6 py-2 rounded-full shadow-lg tracking-wide">
-            5780 €
+            5769 €
           </span>
         </div>
         {/* Titre & description */}
