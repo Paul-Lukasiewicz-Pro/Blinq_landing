@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Linkedin, Twitter, Phone, MapPin } from 'lucide-react';
+import { Mail, Linkedin, Twitter, Phone, MapPin, MessageCircle } from 'lucide-react';
 
 // Fonction utilitaire pour scroll smooth avec offset pour le header fixe
 const scrollToSection = (id: string) => {
@@ -35,8 +35,11 @@ const Footer: React.FC = () => {
               Nous transformons vos idées en expériences digitales exceptionnelles.
             </p>
             <div className="flex space-x-4">
-              <a href="mailto:pro.lukasiewicz@gmail.com" className="text-gray-400 hover:text-white transition-colors">
+              <a href="mailto:paul@blinq.agency" className="text-gray-400 hover:text-white transition-colors">
                 <Mail size={20} />
+              </a>
+              <a href="https://wa.me/33781726954" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                <MessageCircle size={20} />
               </a>
               <a href="https://linkedin.com/company/blinq" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin size={20} />
@@ -86,6 +89,10 @@ const Footer: React.FC = () => {
               <div className="flex items-center space-x-2 text-gray-400">
                 <Mail size={16} />
                 <span>pro.lukasiewicz@gmail.com</span>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-400">
+                <MessageCircle size={16} />
+                <span>+33 7 81 72 69 54</span>
               </div>
  
             </div>
