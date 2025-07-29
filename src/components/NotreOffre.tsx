@@ -1,13 +1,14 @@
 import React from 'react';
 
 const avantages = [
-  "Livraison en 30 jours",
-  "100% sur-mesure",
-  "Un seul interlocuteur",
-  "Développement & intégration",
+  "Atelier de Cadrage",
+  "Product Design",
+  "Développement",
+  "Intégration",
   "Retours illimités",
   "Bases de Données Custom",
-  "Intégration d'API"
+  "Intégration d'API", 
+  "Livraison en 30 jours"
 ];
 
 const options = [
