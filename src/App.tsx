@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import NosProjets from './components/NosProjets';
 import NotreOffre from './components/NotreOffre';
 import Methode from './components/Methode';
+import Apres30Jours from './components/Apres30Jours';
 
 import FAQ from './components/FAQ';
 import CTA from './components/CTA';
@@ -26,6 +27,10 @@ function App() {
         <SectionDivider />
         <section id="methode" className="min-h-screen">
           <Methode />
+        </section>
+        <SectionDivider />
+        <section id="apres-30-jours" className="min-h-screen">
+          <Apres30Jours />
         </section>
         <SectionDivider />
         <section id="notre-offre" className="min-h-screen">
