@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, X } from 'lucide-react';
+import { Phone } from 'lucide-react';
 
 interface HeaderProps {
   isMenuOpen: boolean;
@@ -22,8 +22,8 @@ const scrollToSection = (id: string) => {
 const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
   return (
     <header className="fixed top-2 sm:top-4 left-0 right-0 z-50 px-2 sm:px-4 lg:px-8 font-garet">
-      <div className="max-w-7xl mx-auto bg-white/95 backdrop-blur-md shadow-lg border border-gray-100 rounded-none lg:rounded-full">
-        <div className="flex justify-between items-center h-14 sm:h-16 px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto bg-white/95 backdrop-blur-md shadow-lg border border-gray-100 rounded-full">
+                  <div className="flex justify-between items-center h-12 sm:h-14 px-3 sm:px-5">
           {/* Left side - Logo, Company Name and Navigation */}
           <div className="flex items-center space-x-4 sm:space-x-8">
             {/* Logo and Company Name */}
@@ -77,29 +77,66 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
             </nav>
           </div>
 
-          {/* Right side - CTA Button */}
-          <div className="hidden lg:block">
+          {/* Right side - WhatsApp + CTA */}
+          <div className="hidden lg:flex items-center gap-4">
             <a 
               href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group relative bg-gray-900 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg overflow-hidden"
+              className="group relative bg-gray-900 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg overflow-hidden"
             >
               <span className="relative z-10 group-hover:text-white transition-colors duration-300">
                 Prendre un Rendez-vous
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
             </a>
+            <a 
+              href="https://wa.me/33781726954" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className="transition-transform hover:scale-105"
+            >
+              <span className="pulse-container">
+                <span className="pulse-ring"></span>
+                <span className="pulse-ring delay-1"></span>
+                <span className="pulse-ring delay-2"></span>
+                <span className="inline-flex items-center justify-center rounded-full bg-[#25D366] p-2 shadow-sm">
+                  <Phone size={18} className="text-white" />
+                </span>
+              </span>
+            </a>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            className="lg:hidden p-2 -mr-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Menu"
-          >
-            {isMenuOpen ? <X size={20} className="text-gray-700" /> : <Menu size={20} className="text-gray-700" />}
-          </button>
+          {/* Mobile CTAs (left of burger) */}
+          <div className="lg:hidden flex items-center gap-2">
+            <a
+              href="https://wa.me/33781726954"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className="transition-transform hover:scale-105 p-2"
+            >
+              <span className="pulse-container">
+                <span className="pulse-ring"></span>
+                <span className="pulse-ring delay-1"></span>
+                <span className="pulse-ring delay-2"></span>
+                <span className="inline-flex items-center justify-center rounded-full bg-[#25D366] p-2 shadow-sm">
+                  <Phone size={18} className="text-white" />
+                </span>
+              </span>
+            </a>
+            <a
+              href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Prendre un rendez-vous"
+              className="inline-flex items-center justify-center rounded-full bg-black text-white px-2.5 py-1.5 text-xs font-medium shadow-sm transition-transform hover:scale-105"
+            >
+              Prendre un RDV
+            </a>
+          </div>
+
         </div>
 
         {/* Mobile Navigation */}

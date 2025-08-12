@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
               <a href="https://wa.me/33781726954" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <MessageCircle size={20} />
               </a>
-              <a href="https://linkedin.com/company/blinq" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/company/blinqagency/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin size={20} />
               </a>
             </div>
@@ -90,10 +90,10 @@ const Footer: React.FC = () => {
                 <Mail size={16} />
                 <span>pro.lukasiewicz@gmail.com</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-400">
+              <a href="https://wa.me/33781726954" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors">
                 <MessageCircle size={16} />
                 <span>+33 7 81 72 69 54</span>
-              </div>
+              </a>
  
             </div>
             <a 

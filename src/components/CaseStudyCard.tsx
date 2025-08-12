@@ -14,7 +14,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ title, contexte, solution
     <div className="w-full max-w-6xl mx-auto bg-gradient-to-b from-purple-50 backdrop-blur-md rounded-3xl shadow-2xl px-6 py-12 md:px-16 md:py-16 flex flex-col md:flex-row items-center gap-12">
       {/* Text Content */}
       <div className="md:w-2/5 w-full">
-        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 whitespace-nowrap">{title}</h3>
+        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 break-words leading-tight">{title}</h3>
         
         <div className="space-y-4 text-sm text-gray-600">
           <div>

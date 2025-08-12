@@ -5,8 +5,6 @@ import Cal, { getCalApi } from '@calcom/embed-react';
 const CTA: React.FC = () => {
   const benefits = [
     "Audit gratuit de vos processus",
-    "Démonstration personnalisée",
-    "Devis détaillé sous 48h",
     "Accompagnement dédié"
   ];
 
@@ -32,18 +30,16 @@ const CTA: React.FC = () => {
             <div>
               <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium mb-6">
                 <Calendar className="w-4 h-4 mr-2" />
-                Consultation gratuite - 20 minutes
+                Analyse gratuite - 20 minutes
               </div>
               
               <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                Transformez vos processus
-
+                Scalez et optimisez vos coûts
               </h2>
               
               <p className="text-xl mb-8 text-gray-600">
-                Réservez un appel découverte gratuit avec notre équipe. 
-                Nous analyserons vos besoins et vous proposerons une solution sur mesure 
-                pour optimiser vos opérations.
+                Réservez un appel avec Paul.
+                Nous analyserons comment nous pouvons vous aider à optimiser vos opérations.
               </p>
 
               {/* Benefits List */}
@@ -64,7 +60,7 @@ const CTA: React.FC = () => {
                   rel="noopener noreferrer"
                   className="group inline-flex items-center bg-purple-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
-                  Réserver ma démo gratuite
+                  Réserver un appel gratuit
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
@@ -90,7 +86,7 @@ const CTA: React.FC = () => {
               rel="noopener noreferrer"
               className="group inline-flex items-center bg-purple-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-xl transition-all duration-300"
             >
-              Réserver ma démo gratuite
+              Réserver un appel
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>

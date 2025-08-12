@@ -11,10 +11,10 @@ const avantages = [
   "Livraison en 30 jours"
 ];
 
-const options = [
-  "Backend Custom applicatif custom",
-  "Intégration IA",
-  "Hébèrgement & Maintenance",
+const options: string[] = [
+  //"Backend Custom applicatif custom",
+  //"Intégration IA",
+  //"Hébèrgement & Maintenance",
 
 ];
 
@@ -26,7 +26,7 @@ const images = [
 
 const NotreOffre: React.FC = () => {
   return (
-    <section id="notre-offre" className="min-h-screen flex flex-col items-center justify-center py-20 bg-hero">
+    <section id="notre-offre" className="min-h-screen flex flex-col items-center justify-center py-20 bg-hero px-4">
       <h2 className="text-5xl font-bold text-gray-900 mb-12 text-center" style={{ fontFamily: 'Garet, sans-serif' }}>
         Notre offre
       </h2>
@@ -38,15 +38,14 @@ const NotreOffre: React.FC = () => {
           </span>
         </div>
         {/* Titre & description */}
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Garet, sans-serif' }}>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center md:text-left" style={{ fontFamily: 'Garet, sans-serif' }}>
           Outil métier sur-mesure
         </h2>
         <p className="text-lg text-gray-700 mb-8 text-center max-w-xl">
-          En 30 jours, Blinq conçoit et développe votre outil métier sur-mesure : CRM, dashboard, portail client, agent IA...<br />
-          Le but : éliminer la complexité, automatiser vos process et vous faire gagner du temps.
+          Livré en 30 jours, Prix fixe et Aller-Retour Illimité. 
         </p>
         {/* Images en éventail/flou après la description */}
-        <div className="relative w-full flex justify-center mb-8" style={{ height: 120 }}>
+        <div className="relative w-full flex justify-center mb-8 overflow-hidden" style={{ height: 120 }}>
           {/* Image gauche */}
           <img
             src={images[0]}
@@ -85,7 +84,7 @@ const NotreOffre: React.FC = () => {
             </div>
           ))}
         </div>
-        <div className="text-gray-400 text-xs mb-8 w-full max-w-xl text-left">* Service en option payant</div>
+       {/* <div className="text-gray-400 text-xs mb-8 w-full max-w-xl text-left">* Service en option payant</div> */}
         {/* CTA */}
         <a
           href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true"

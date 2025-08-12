@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Empêche tout débordement horizontal sur mobile */
+html, body { overflow-x: hidden; }
+
 .bg-hero {
   background: #F7F7F7;
 }
@@ -17,3 +20,32 @@
   animation: floatY 3.5s ease-in-out infinite;
   animation-delay: var(--delay, 0s);
 }
+
+/* Ondes concentriques pour bouton WhatsApp */
+@keyframes pulseRing {
+  0% { transform: scale(1); opacity: 0.55; }
+  70% { opacity: 0.18; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+.pulse-container {
+  position: relative;
+  display: inline-flex;
+  height: 36px; /* h-9 */
+  width: 36px;  /* w-9 */
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  border: 2px solid rgba(37, 211, 102, 0.55); /* #25D366 */
+  animation: pulseRing 2.4s ease-out infinite;
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+
+.pulse-ring.delay-1 { animation-delay: 0.6s; }
+.pulse-ring.delay-2 { animation-delay: 1.2s; }
