@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
               interval={3000}
             />{' '}
 
-            <span className="block sm:inline"><br />Le but : éliminer la complexité et améliorer vos résultats</span>
+            <span className="block sm:inline"><br />Le but : Scalez et maitriser vos coûts, sans recrutement</span>
           </div>
 
           {/* Benefits avec animation */}
