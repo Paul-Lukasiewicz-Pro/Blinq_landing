@@ -28,7 +28,7 @@ const Apres30Jours: React.FC = () => {
         <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-6 py-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-3">
-              Livré en 30 Jours, Améliorez-le tous les <span className="text-purple-600">10 jours</span>.
+              Livré en 30 Jours, améliorez-le tous les <span className="text-purple-600">10 jours</span>
             </h2>
             <p className="text-base text-gray-600 max-w-2xl mx-auto">
               Une méthode lean, pensée pour les entreprises qui veulent des résultats rapides sans compromis sur la qualité.<br />

@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
             <span className={`block transition-all duration-700 ease-out delay-400 ${
               titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}>
-              sur-mesure.
+              sur-mesure
             </span>
           </h1>
 
@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
               interval={3000}
             />{' '}
 
-            <span className="block sm:inline"><br />Le but : Scalez et maitriser vos coûts, sans recrutement</span>
+            <span className="block sm:inline"><br />Le but : Scalez et maîtrisez vos coûts, sans recrutement</span>
           </div>
 
           {/* Benefits avec animation */}
