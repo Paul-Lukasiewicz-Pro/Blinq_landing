@@ -119,7 +119,7 @@ const Hero: React.FC = () => {
             }`}
           >
             <a 
-              href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true" 
+              href="https://cal.com/paul-blinq/30min?overlayCalendar=true" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center w-full sm:w-auto"

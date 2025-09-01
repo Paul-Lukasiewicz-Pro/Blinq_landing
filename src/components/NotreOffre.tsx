@@ -34,7 +34,7 @@ const NotreOffre: React.FC = () => {
         {/* Prix */}
         <div className="text-center mb-4">
           <span className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white text-lg font-bold px-6 py-2 rounded-full shadow-lg tracking-wide">
-            5769 €
+            5720 €
           </span>
         </div>
         {/* Titre & description */}
@@ -87,7 +87,7 @@ const NotreOffre: React.FC = () => {
        {/* <div className="text-gray-400 text-xs mb-8 w-full max-w-xl text-left">* Service en option payant</div> */}
         {/* CTA */}
         <a
-          href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true"
+          href="https://cal.com/paul-blinq/30min?overlayCalendar=true"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-2 bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg transition-all duration-300"

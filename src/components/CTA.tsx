@@ -55,7 +55,7 @@ const CTA: React.FC = () => {
               {/* Desktop CTA Button */}
               <div className="hidden lg:block">
                 <a 
-                  href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true" 
+                  href="https://cal.com/paul-blinq/30min?overlayCalendar=true" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="group inline-flex items-center bg-purple-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-xl transition-all duration-300 hover:scale-105"
@@ -71,7 +71,7 @@ const CTA: React.FC = () => {
               {/* Utilisation du composant Cal.com officiel */}
               <Cal
                 namespace="20min"
-                calLink="paul-lukasiewicz/20min"
+                calLink="paul-blinq/30min"
                 style={{ width: '100%', height: '600px', overflow: 'scroll', background: 'rgba(255,255,255,0.9)', borderRadius: '1rem', padding: '2rem', border: '1px solid rgba(147,51,234,0.2)' }}
                 config={{ layout: 'month_view' }}
               />
@@ -81,7 +81,7 @@ const CTA: React.FC = () => {
           {/* Mobile CTA Button */}
           <div className="lg:hidden text-center mt-8">
             <a 
-              href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true" 
+              href="https://cal.com/paul-blinq/30min?overlayCalendar=true" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group inline-flex items-center bg-purple-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-xl transition-all duration-300"

@@ -80,7 +80,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
           {/* Right side - WhatsApp + CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <a 
-              href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true" 
+              href="https://cal.com/paul-blinq/30min?overlayCalendar=true" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group relative bg-gray-900 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg overflow-hidden"
@@ -127,7 +127,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               </span>
             </a>
             <a
-              href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true"
+              href="https://cal.com/paul-blinq/30min?overlayCalendar=true"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Prendre un rendez-vous"
@@ -185,7 +185,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               </button>
               <div className="pt-2">
                 <a 
-                  href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true" 
+                  href="https://cal.com/paul-blinq/30min?overlayCalendar=true" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-center font-medium hover:shadow-lg transition-all duration-300"

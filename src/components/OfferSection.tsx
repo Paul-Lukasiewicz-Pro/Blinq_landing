@@ -133,7 +133,7 @@ const OfferSection: React.FC = () => {
           {/* CTA Button */}
           <div className="text-center">
             <a 
-              href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true" 
+              href="https://cal.com/paul-blinq/30min?overlayCalendar=true" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-xl transition-all duration-300 hover:scale-105"

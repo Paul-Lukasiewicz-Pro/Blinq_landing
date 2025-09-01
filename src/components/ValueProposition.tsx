@@ -121,7 +121,7 @@ const ValueProposition: React.FC = () => {
               Découvrez comment nos outils sur mesure peuvent transformer votre productivité
             </p>
             <a 
-              href="https://cal.com/paul-lukasiewicz/20min?overlayCalendar=true" 
+              href="https://cal.com/paul-blinq/30min?overlayCalendar=true" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
