@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-gray-400">
                 <Mail size={16} />
-                <span>pro.lukasiewicz@gmail.com</span>
+                <span>paul@blinq.agency</span>
               </div>
               <a href="https://wa.me/33781726954" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors">
                 <MessageCircle size={16} />
