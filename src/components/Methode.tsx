@@ -4,8 +4,8 @@ const planning = [
   {
     day: 'Jour 1',
     col: 0,
-    title: 'Découverte',
-    description: "Appel de découverte avec un membre de l'équipe",
+    title: 'Cadrage',
+    description: "Appel de cadrage pour cerner le périmètre du projet",
     images: [
       { src: '/meet.png', rotation: -10, top: '40', right: '16', delay: 0 }
     ],
@@ -13,57 +13,39 @@ const planning = [
   {
     day: 'Jour 2',
     col: 1,
-    title: 'Cadrage',
-    description: "Appel de cadrage avec Paul",
+    title: 'Début du sprint',
+    description: "Début du développement de la première version",
     images: [
       { src: '/meet.png', rotation: 15, top: '40', right: '16', delay: 0.5 }
     ],
   },
   {
-    day: 'Jour 5',
-    col: 2,
-    title: 'Validation Product Design',
-    description: 'Validation des maquettes et parcours utilisateur',
-    images: [
-      { src: '/Figma.png', rotation: -5, top: '60', right: '70', delay: 1 }
-    ],
-  },
-  {
     day: 'Développement',
-    col: 3,
-    title: 'Building',
-    description: 'On produit votre outil',
+    col: 2,
+    title: 'Développement',
+    description: 'On construit la première version de votre outil',
     images: [
+      { src: '/Figma.png', rotation: -5, top: '60', right: '150', delay: 1 },
       { src: '/cursor.png', rotation: 20, top: '50', right: '16', delay: 0.2 },
-      { src: '/lovable.png', rotation: -15, top: '-50', right: '60', delay: 1.2 },
-      { src: '/openai.png', rotation: 8, top: '55', right: '80', delay: 0.8 }
+      { src: '/lovable.png', rotation: -15, top: '-50', right: '60', delay: 1.2 }
     ],
   },
   {
-    day: 'Jour 20',
-    col: 4,
-    title: 'Présentation de la V1',
-    description: 'Présentation, retours et ajustements',
+    day: 'Jour 15',
+    col: 3,
+    title: 'Démonstration de la V1',
+    description: "On vous présente la première version de votre outil, et on l'améliore selon vos retours.",
     images: [
-      { src: '/meet.png', rotation: -12, top: '40', right: '16', delay: 1.5 }
+      { src: '/meet.png', rotation: 0, top: '-50', right: '150', delay: 0.5 }
     ],
-  },
-  {
-    day: 'Jour 30',
-    col: 5,
-    title: 'Livraison finale',
-    description: 'Intégration du produit fini',
-    images: [],
-  },
+  }
 ];
 
 const columns = [
   'Jour 1',
   'Jour 2',
-  'Jour 5',
   'Développement',
-  'Jour 20',
-  'Jour 30',
+  'Jour 15',
 ];
 
 const Methode: React.FC = () => {
@@ -73,7 +55,7 @@ const Methode: React.FC = () => {
         <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-6 py-20">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-3">
-              Votre outil interne en <span className="text-purple-600">30 jours</span>
+              Votre première version en <span className="text-purple-600">15 jours</span>
             </h2>
             <p className="text-base text-gray-600 max-w-xl mx-auto">
               Un process clair, une équipe réduite et un interlocuteur unique pour vous accompagner dans la création de votre outil interne. Vous êtes au centre de notre démarche.

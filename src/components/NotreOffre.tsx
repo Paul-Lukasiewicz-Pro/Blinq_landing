@@ -2,13 +2,11 @@ import React from 'react';
 
 const avantages = [
   "Atelier de Cadrage",
-  "Product Design",
   "Développement",
   "Intégration",
   "Retours illimités",
   "Bases de Données Custom",
   "Intégration d'API", 
-  "Livraison en 30 jours"
 ];
 
 const options: string[] = [
@@ -39,10 +37,10 @@ const NotreOffre: React.FC = () => {
         </div>
         {/* Titre & description */}
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center md:text-left" style={{ fontFamily: 'Garet, sans-serif' }}>
-          Outil métier sur-mesure
+          Démarrez votre projet
         </h2>
         <p className="text-lg text-gray-700 mb-8 text-center max-w-xl">
-          Livré en 30 jours, Prix fixe et Aller-Retour Illimité. 
+          V1 en 15 Jours, Prix fixe et Aller-Retour Illimité. 
         </p>
         {/* Images en éventail/flou après la description */}
         <div className="relative w-full flex justify-center mb-8 overflow-hidden" style={{ height: 120 }}>

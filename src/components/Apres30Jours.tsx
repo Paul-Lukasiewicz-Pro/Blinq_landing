@@ -3,21 +3,21 @@ import React from 'react';
 const approche = [
   {
     id: 1,
-    title: 'Étape 1 – On priorise ce qui compte',
-    description: 'Ensemble, on identifie les fonctionnalités les plus utiles pour vos équipes.',
-    detail: 'Pas de specs à rallonge. Juste ce qui crée de la valeur, tout de suite.',
+    title: 'Atelier de cadrage',
+    description: 'Identification du flux qui apporte le plus de valeur à votre entreprise.',
+    detail: 'Nous analysons ensemble vos processus métiers pour prioriser la digitalisation la plus impactante.',
   },
   {
     id: 2,
-    title: 'Étape 2 – On livre une V1 en 30 jours',
-    description: 'En 1 mois, vous avez un outil interne en ligne, designé, codé, intégré.',
-    detail: 'Une base solide, utilisable par vos équipes dès maintenant.',
+    title: 'Sprint de 2 semaines',
+    description: 'Livraison d\'une première version fonctionnelle, testable et utilisable immédiatement.',
+    detail: 'Vos équipes peuvent commencer à utiliser l\'outil dès la fin du sprint.',
   },
   {
     id: 3,
-    title: 'Étape 3 – On améliore tous les 10 jours',
-    description: 'Chaque sprint de 10 jours permet d\'ajouter des fonctionnalités, d\'optimiser l\'expérience et de réagir aux retours utilisateurs.',
-    detail: 'Un rythme agile, zéro tunnel, zéro surprise.',
+    title: 'Amélioration continue – 4 semaines',
+    description: 'Points hebdomadaires pour ajuster l\'outil et intégrer les fonctionnalités prioritaires.',
+    detail: 'Correction des dysfonctionnements et optimisation basée sur les retours terrain.',
   },
 ];
 
@@ -28,17 +28,17 @@ const Apres30Jours: React.FC = () => {
         <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-6 py-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-3">
-              Livré en 30 Jours, améliorez-le tous les <span className="text-purple-600">10 jours</span>
+              Digitalisation <span className="text-purple-600">rapide et pragmatique</span>
             </h2>
-            <p className="text-base text-gray-600 max-w-2xl mx-auto">
-              Une méthode lean, pensée pour les entreprises qui veulent des résultats rapides sans compromis sur la qualité.<br />
-              En 30 jours, vous avez une V1 prête à l'emploi. Ensuite, on avance ensemble, sprint après sprint.
+            <p className="text-base text-gray-600 max-w-3xl mx-auto">
+              Chez Blinq, nous digitalisons vos processus métiers de manière rapide et pragmatique.<br />
+              Résultat concret en un temps réduit, flexibilité pour s'adapter aux besoins réels et risque limité pour le client.
             </p>
           </div>
 
           {/* Bloc explicatif en 3 temps */}
           <div className="grid md:grid-cols-3 gap-8">
-            {approche.map((step, idx) => (
+            {approche.map((step) => (
               <div key={step.id} className="relative">
                 {/* Contenu principal */}
                 <div className="bg-gradient-to-b from-purple-50 backdrop-blur-md rounded-3xl shadow-2xl p-8 h-full">

@@ -9,12 +9,12 @@ const Hero: React.FC = () => {
   const [ctaVisible, setCtaVisible] = useState(false);
 
   const benefits = [
-    "Livré en 30 Jours",
+    "Première version en 10 jours",
     "100% sur mesure", 
-    "Prix Fixe"
+    "Accompagnement hébdomadiare"
   ];
 
-  const animatedWords = ["Dashboard", "CRM", "Outil Interne", "Portail Client", "Agent IA"];
+  const animatedWords = ["Dashboard", "CRM", "Outil Interne", "GMAO", "GPAO"];
 
   useEffect(() => {
     // Animation séquentielle des éléments
@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
         <div className="text-center">
           {/* Badge */}
           <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-gradient-to-r from-purple-50 to-blue-50 rounded-full text-xs sm:text-sm font-medium text-purple-700 mb-6 sm:mb-8 max-w-sm sm:max-w-none">
-            🏆 L'agence de développement d'outils internes la plus efficace de France 2025
+            🏆 Meilleure agence digitale pour l'industrie 2025
           </div>
 
           {/* Main Headline avec animation */}
@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
               interval={3000}
             />{' '}
 
-            <span className="block sm:inline"><br />Le but : Scalez et maîtrisez vos coûts, sans recrutement</span>
+            <span className="block sm:inline"><br />Le but : Digitalisez vos opérations et accélérez vos performances</span>
           </div>
 
           {/* Benefits avec animation */}
@@ -139,7 +139,7 @@ const Hero: React.FC = () => {
           {/* Trust Indicator */}
           <div className="text-center visibility: hidden">
             <p className="text-gray-500 text-xs sm:text-sm mb-4">
-              + de 50 entreprises nous font confiance. 
+              100% de nos clients nous recommandent
             </p>
           </div>
         </div>
